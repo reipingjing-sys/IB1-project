@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive - Hotel Gourmet</title>
+    <style>
+        /* ホテルの重厚な雰囲気を踏襲 */
+        body {
+            background-color: #000000;
+            color: #d4af37;
+            font-family: "Times New Roman", "Yu Mincho", "MS Mincho", serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* ヘッダー装飾 */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo-sub {
+            font-size: 0.8rem;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 0.2em;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        /* フォルダリンクのコンテナ */
+        .archive-container {
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 各リンクのスタイル */
+        .archive-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 40px;
+            background: linear-gradient(90deg, #151515, #0a0a0a);
+            border: 1px solid #333;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .archive-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #d4af37;
+            transform: scaleY(0);
+            transition: transform 0.4s ease;
+        }
+
+        .archive-item:hover {
+            border-color: #d4af37;
+            background: #1a1a1a;
+            transform: translateX(10px);
+        }
+
+        .archive-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .day-label {
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #d4af37;
+        }
+
+        .day-desc {
+            font-size: 0.9rem;
+            color: #888;
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+            color: #d4af37;
+            transition: transform 0.3s ease;
+        }
+
+        .archive-item:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        /* フッター */
+        footer {
+            margin-top: 80px;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-sub">Special Archives</div>
+        <h1>HOTEL GOURMET</h1>
+    </header>
+
+    <nav class="archive-container">
+        <a href="day1/index.html" class="archive-item">
+            <span class="day-label">Day 1</span>
+            <span class="day-desc">day1</span>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="day2/index.html" class="archive-item">
+            <span class="day-label">Day 2</span>
+            <span class="day-desc">day2</span>
+            <span class="arrow">→</span>
+        </a>
+    </nav>
+
+    <footer>&copy; HOTEL GOURMET ALL RIGHTS RESERVED.</footer>
+
+</body>
+</html>
